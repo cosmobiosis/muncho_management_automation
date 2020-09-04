@@ -14,6 +14,7 @@ def postCommodity(idPair, payload, session):
     return
 
 def postAddOn(businessId, payload, session):
+    print('addon is', json.dumps(payload))
     postURL = baseURL + '/businesses/' + businessId + '/addOnTemplates'
     response = session.post(postURL, json=json.dumps(payload), timeout=TIMEOUT)
     print('getting JSON...', response.json())

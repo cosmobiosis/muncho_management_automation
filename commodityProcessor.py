@@ -47,8 +47,8 @@ def processOneCommodity(dataTrunk, businessId, categoryNameToIdMapping, session)
         addonEnd += 1
         if addonEnd >= dataTrunk.shape[0] or dataTrunk.iloc[addonEnd, 0] != 'value':
             addOn = getAddOn(dataTrunk.iloc[addonStart: addonEnd, :])
-            # addOnId = postAddOn(businessId, addOn, session)
-            # addOnIds.append(addOnId)
+            addOnId = postAddOn(businessId, addOn, session)
+            addOnIds.append(addOnId)
 
             addonStart = addonEnd
 
