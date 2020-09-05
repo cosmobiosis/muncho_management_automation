@@ -16,8 +16,7 @@ def postCommodity(idPair, payload, session):
 def postAddOn(businessId, payload, session):
     postURL = baseURL + '/businesses/' + businessId + '/addOnTemplates'
     response = session.post(postURL, json=payload, timeout=TIMEOUT)
-    print('getting JSON...', response.json())
-    addOnId = str(response.json()['_id'])
+    addOnId = str(response.json()['id'])
     if response.status_code == 200:
         print('AddOn', addOnId, ' posting for ', businessId, ' is a success')
     else:

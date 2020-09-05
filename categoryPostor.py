@@ -4,7 +4,7 @@ from config import *
 def postCategory(businessId, payload, session):
     postURL = baseURL + '/businesses/' + businessId + '/commodityCategories'
     response = session.post(postURL, json=payload, timeout=TIMEOUT)
-    categoryId = str(response.json()['_id'])
+    categoryId = str(response.json()['id'])
     if response.status_code == 200:
         print('Category', categoryId, ' posting for ', businessId, ' is a success')
     else:

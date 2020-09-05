@@ -72,8 +72,8 @@ def processOneCommodity(dataTrunk, businessId, categoryNameToIdMapping, session)
         "en-US": dataTrunk.iloc[6, 2],
         "zh-CN": dataTrunk.iloc[6, 4],
     }
-    commodity['thumbnail'] = ''
-    commodity['images'] = []
+    commodity['thumbnail'] = 'website/misc/defaultFood.png'
+    commodity['images'] = ['website/misc/defaultFood.png']
     commodity['attributes'] = attributes
     commodity['specifications'] = specifications
     commodity['addOnIds'] = addOnIds
